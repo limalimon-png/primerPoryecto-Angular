@@ -1,0 +1,9 @@
+<ul class="list-group">
+    <!-- con las llaves [lo que sea]="", estamos añadiendo el valor de "" a la propiedad-->
+    <a [routerLink]="ruta.path" 
+    class="list-group-item" 
+    *ngFor="let ruta of rutas" >
+        {{ruta.name}}
+    </a>
+   
+</ul>

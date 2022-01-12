@@ -2,13 +2,24 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { MenuComponent } from './components/menu/menu.component';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    //AboutComponent,
+    //ContactComponent,
+    //HomeComponent,
+    MenuComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    //importamos el modulo que cremaos anteriormente con las rutas
+    AppRoutingModule,
+    //importamos las paginas que tenemos creadas
+    PagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

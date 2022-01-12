@@ -1,1 +1,20 @@
 <p>posts works!</p>
+
+<h1>Posts</h1>
+<ul class="List-group">  
+
+    <!-- guardamos la informacion en la propiedad mensaje que esta en el posts.component (el input que hemos puesto alli)-->
+    <app-post *ngFor="let mensaje of mensajes | async"
+    [mensaje]="mensaje"></app-post>
+    <!--usamos *ngfor para coger la lista de todos los menjsaes-->
+    <!--<li 
+    *ngFor="let mensaje of mensajes | async"
+    class="list-group-item">
+mensaje tiene diferentes propiedades title body etc
+    <h2>{{mensaje.title}}</h2>
+    <p>
+        {{mensaje.body}}
+    </p>
+
+</li>-->
+</ul>

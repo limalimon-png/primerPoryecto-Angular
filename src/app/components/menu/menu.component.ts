@@ -22,12 +22,10 @@ rutas =[
     path: '/contact'
   },
   {
-    path: 'posts',
-    //loadChildren: './pages/posts/posts.module#PostsModule'
-    //esto lo que hace es la lazyload
-    //se va a la ruta donde esta posts
-    loadChildren: () => import('../../pages/posts/posts.module').then(m => m.PostsModule)
-  },
+    name: 'posts',
+    path: '/posts'
+    
+  }
 ];
 
 

@@ -24,5 +24,9 @@ export class PostsComponent implements OnInit {
    });*/
 
 }
+//ahora desde la funcion emitimos en consola el evento que hemos recibido.
+escuchaClick(id:number){
+  console.log('Click en: ',id);
+}
   
 }

@@ -3,9 +3,12 @@
 <h1>Posts</h1>
 <ul class="List-group">  
 
-    <!-- guardamos la informacion en la propiedad mensaje que esta en el posts.component (el input que hemos puesto alli)-->
+    <!-- guardamos la informacion en la propiedad mensaje que esta en el posts.component (el input que hemos puesto alli)
+    despues, desdde el hijo le envia un evento y creamos una funcion llamada escuchaClick en posts.component.ts-->
     <app-post *ngFor="let mensaje of mensajes | async"
-    [mensaje]="mensaje"></app-post>
+    [mensaje]="mensaje"
+    (enviarAlPadre)="escuchaClick($event)"
+    ></app-post>
     <!--usamos *ngfor para coger la lista de todos los menjsaes-->
     <!--<li 
     *ngFor="let mensaje of mensajes | async"
